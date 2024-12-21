@@ -167,13 +167,14 @@ const handleSubmit = () => {
       </div>
       <div class="flex flex-row items-center justify-center gap-3 mt-4">
         <button
-          class="flex flex-col items-center justify-center w-full h-12 px-4 py-2 text-sm font-medium text-white transition-all duration-300 bg-gray-400 rounded-lg hover:bg-gray-500 hover:scale-105"
+          class="flex flex-col items-center justify-center w-full h-12 px-4 py-2 text-sm font-medium text-white transition-all duration-300 bg-gray-500 rounded-lg hover:bg-gray-600 hover:scale-105"
           @click="handleClose()"
         >
           Cancel
         </button>
         <button
-          class="flex flex-col items-center justify-center w-full h-12 px-4 py-2 text-sm font-medium text-white transition-all duration-300 bg-green-500 rounded-lg hover:bg-green-600 hover:scale-105"
+          class="flex flex-col items-center justify-center w-full h-12 px-4 py-2 text-sm font-medium text-white transition-all duration-300 bg-green-500 rounded-lg hover:bg-green-600 hover:scale-105 disabled:bg-gray-400 disabled:cursor-not-allowed disabled:hover:scale-100"
+          :disabled="!formState.url"
           @click="handleSubmit()"
         >
           Upload
